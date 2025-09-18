@@ -562,7 +562,7 @@ const sectionRefs = phoneScreens.map(() => useRef(null));
 {/* Right: Full-size sticker image */}
 <div className="flex-1 flex items-center justify-end h-[700px] w-full lg:w-auto">
   <img
-    src="/stickers/cow1.png"
+    src="/cow1.png"
     alt="Cattle"
     className="h-full max-h-[700px] w-auto object-contain drop-shadow-2xl"
     style={{ maxWidth: "100%" }}
