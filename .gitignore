@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+# Build output
+dist/
+# Local env files
+.env
+.env.*
+# Vite cache
+.vite/
+# VSCode settings
+.vscode/
+# System files
+.DS_Store
+Thumbs.db
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Optional: OS generated files
+*.log
+# Optional: Mac system files
+.AppleDouble
+.LSOverride
+# Optional: Windows system files
+ehthumbs.db
+Desktop.ini
+# Optional: Linux system files
+*~
