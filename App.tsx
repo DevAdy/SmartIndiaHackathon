@@ -183,7 +183,7 @@ export default function App() {
     transition={{ duration: 0.6, delay: 0.2 }}
     className="relative z-10 flex flex-col items-center"
   >
-    {/* Cattle/Bull Image */}
+    {/* Cattle/Bull Image jjd*/}
     <img
       src="/cattle.jpg"
       alt="Cattle"
