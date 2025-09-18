@@ -14,7 +14,7 @@ import {
   Target,
   Zap
 } from 'lucide-react'
-import { useInView } from "framer-motion";
+//import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 function BlockchainPhoneScreen({ blockchainStep }: { blockchainStep: number }) {
@@ -444,10 +444,10 @@ export default function App() {
 ];
 
 const sectionRefs = phoneScreens.map(() => useRef(null));
-const inViews = sectionRefs.map(ref =>
-  useInView(ref, { amount: 0.1, margin: "-10% 0px -10% 0px" })
-);
-const activeScreen = inViews.findIndex(Boolean);
+//const inViews = sectionRefs.map(ref =>
+  //useInView(ref, { amount: 0.1, margin: "-10% 0px -10% 0px" })
+//);
+//const activeScreen = inViews.findIndex(Boolean);
 
   // Phone position logic
   // Steps: 0 (right), 1 (left), 2 (right), 3 (left), 4 (right), else (hidden)
@@ -457,6 +457,7 @@ const activeScreen = inViews.findIndex(Boolean);
 
   // Only show phone if not hidden and not on mobile
   //const showPhone = phoneSide !== "hidden" && !isMobile;
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50 relative overflow-hidden">
