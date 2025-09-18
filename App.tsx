@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
+import { motion, useScroll, useTransform} from 'framer-motion'
 import { Button } from './components/ui/button'
-import { Card, CardContent } from './components/ui/card'
-import { ImageWithFallback } from './components/figma/ImageWithFallback'
 import { 
   Camera, 
   Brain, 
@@ -10,99 +8,15 @@ import {
   Shield, 
   Gamepad2, 
   Wifi,
-  ArrowRight,
   CheckCircle,
   BarChart3,
   Sparkles,
   Target,
-  Zap,
-  Globe
+  Zap
 } from 'lucide-react'
-import { useIsMobile } from "./components/ui/use-mobile"; // Add this import at the top
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-// Feature definitions
-const features = [
-  {
-    icon: Wifi,
-    title: "Offline AI",
-    description: "Works without internet connection in remote areas",
-    gradient: "from-blue-500 to-cyan-500",
-    points: [
-      "No network required",
-      "Instant results",
-      "Rural-ready"
-    ],
-    delay: 0
-  },
-  {
-    icon: BarChart3,
-    title: "REST API",
-    description: "Easy integration with existing government systems",
-    gradient: "from-purple-500 to-pink-500",
-    points: [
-      "Seamless integration",
-      "Real-time data access",
-      "Standardized protocols"
-    ],
-    delay: 0.1
-  },
-  {
-    icon: Shield,
-    title: "Blockchain Security",
-    description: "Tamper-proof immutable records with distributed ledger",
-    gradient: "from-emerald-500 to-teal-500",
-    points: [
-      "Immutable records",
-      "Decentralized storage",
-      "Enhanced privacy"
-    ],
-    delay: 0.2
-  },
-  {
-    icon: Brain,
-    title: "Explainable AI",
-    description: "Transparent decisions with feature highlighting",
-    gradient: "from-orange-500 to-red-500",
-    points: [
-      "Interpretable models",
-      "Feature importance visualization",
-      "User-friendly explanations"
-    ],
-    delay: 0.3
-  },
-  {
-    icon: Gamepad2,
-    title: "Gamified Training",
-    description: "Interactive learning for field workers",
-    gradient: "from-indigo-500 to-purple-500",
-    points: [
-      "Engaging content",
-      "Real-world scenarios",
-      "Instant feedback"
-    ],
-    delay: 0.4
-  }
-]
-
-// Floating animation component
-const FloatingElement = ({ children, delay = 0, duration = 6 }: { children: React.ReactNode, delay?: number, duration?: number }) => (
-  <motion.div
-    animate={{
-      y: [-10, 10, -10],
-      rotate: [-2, 2, -2],
-    }}
-    transition={{
-      duration,
-      repeat: Infinity,
-      delay,
-      ease: "easeInOut"
-    }}
-  >
-    {children}
-  </motion.div>
-)
 function BlockchainPhoneScreen({ blockchainStep }: { blockchainStep: number }) {
   return (
     <div className="p-6 h-full bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 relative overflow-hidden">
@@ -231,21 +145,21 @@ export default function App() {
   // Calculate which screen should be shown based on scroll position
 
   // Advanced transform values with spring physics
-  const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 }
+  //const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 }
   //const phoneX = useSpring(useTransform(scrollYProgress, [0, 0.25, 0.75, 1], ['45vw', '25vw', '-25vw', '-45vw']), springConfig)
   //const phoneY = useSpring(useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [80, 0, -60, -120]), springConfig)
   //const phoneScale = useSpring(useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.75, 1, 1, 0.85]), springConfig)
   //const phoneRotate = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, -3]), springConfig)
   
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0])
-  const heroScale = useTransform(scrollYProgress, [0, 0.25], [1, 0.95])
-  const heroY = useTransform(scrollYProgress, [0, 0.25], [0, -50])
+  //const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0])
+  //const heroScale = useTransform(scrollYProgress, [0, 0.25], [1, 0.95])
+  //const heroY = useTransform(scrollYProgress, [0, 0.25], [0, -50])
 
   // Background parallax effects
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
   const bgOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 0.1, 0])
 
-  const isMobile = useIsMobile();
+  //const isMobile = useIsMobile();
   // Inside your App component, before return:
   const [blockchainStep, setBlockchainStep] = useState(0);
   useEffect(() => {
@@ -542,7 +456,7 @@ const activeScreen = inViews.findIndex(Boolean);
   if (activeScreen === -1 || activeScreen === 5) phoneSide = "hidden";
 
   // Only show phone if not hidden and not on mobile
-  const showPhone = phoneSide !== "hidden" && !isMobile;
+  //const showPhone = phoneSide !== "hidden" && !isMobile;
 
   // Phone container style
   const phoneContainerStyle =
