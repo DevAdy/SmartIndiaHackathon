@@ -451,9 +451,9 @@ const activeScreen = inViews.findIndex(Boolean);
 
   // Phone position logic
   // Steps: 0 (right), 1 (left), 2 (right), 3 (left), 4 (right), else (hidden)
-  let phoneSide: "left" | "right" | "hidden" = "right";
-  if (activeScreen === 1 || activeScreen === 3) phoneSide = "left";
-  if (activeScreen === -1 || activeScreen === 5) phoneSide = "hidden";
+  //let phoneSide: "left" | "right" | "hidden" = "right";
+  //if (activeScreen === 1 || activeScreen === 3) phoneSide = "left";
+  //if (activeScreen === -1 || activeScreen === 5) phoneSide = "hidden";
 
   // Only show phone if not hidden and not on mobile
   //const showPhone = phoneSide !== "hidden" && !isMobile;
