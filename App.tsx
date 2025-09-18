@@ -458,12 +458,6 @@ const activeScreen = inViews.findIndex(Boolean);
   // Only show phone if not hidden and not on mobile
   //const showPhone = phoneSide !== "hidden" && !isMobile;
 
-  // Phone container style
-  const phoneContainerStyle =
-    phoneSide === "left"
-      ? { left: 32, right: "auto", transform: "translateY(-50%)" }
-      : { right: 32, left: "auto", transform: "translateY(-50%)" };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50 relative overflow-hidden">
       {/* Animated Background Elements */}
